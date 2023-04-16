@@ -1,0 +1,19 @@
+digraph {
+    rankdir=LR;
+    concentrate=true;
+    subgraph cluster_Parameters {
+        label="Parameters";
+        "Parameters: BucketName" [label="BucketName" shape=diamond];
+    }
+
+    subgraph cluster_Resources {
+        label="Resources";
+        "Resources: MyBucket" [label="MyBucket" shape=Mrecord];
+    }
+
+    subgraph cluster_Outputs {
+        label="Outputs";
+    }
+
+    "Parameters: BucketName" -> "Resources: MyBucket";
+}
